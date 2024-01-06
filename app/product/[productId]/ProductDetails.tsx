@@ -67,17 +67,17 @@ const ProductDetails:React.FC<ProductDetailsProps> =
         setCartProduct((prev) => {
             return {...prev, quantity: prev.quantity + 1}
         });
-    }, [cartProduct]);
+    }, [cartProduct.quantity]);
 
     const handleQtyDecrease = useCallback(() => {
-        if (cartProduct.quantity == 1){
+        if (cartProduct.quantity === 1){
             return;
         }
-
         setCartProduct((prev) => {
             return {...prev, quantity: prev.quantity - 1}
-    });
+        });
     }, [cartProduct]);
+    
 
 
     return <div className="grid grid-cols-1
