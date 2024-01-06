@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { CartProductType, SelectedImgType } from "@/app/product/[productId]/ProductDetails";
 
