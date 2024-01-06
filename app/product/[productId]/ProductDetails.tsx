@@ -1,5 +1,6 @@
 "use client"
 
+import Button from "@/app/components/products/Button";
 import SetColor from "@/app/components/products/SetColor";
 import SetQuantity from "@/app/components/products/SetQuantity";
 import { Rating } from "@mui/material";
@@ -46,7 +47,6 @@ const ProductDetails:React.FC<ProductDetailsProps> =
 
     });
 
-    console.log(cartProduct) 
 
     const productRating = 
         product.reviews.reduce((acc: number, item: any) => 
@@ -119,7 +119,12 @@ const ProductDetails:React.FC<ProductDetailsProps> =
             handleQtyDecrease={handleQtyDecrease}
             />
             <Horizontal/>
-            <div>add to cart</div>
+            <div>
+                <Button
+                label ="Add To Cart"
+                onClick={() => {}}
+                />
+            </div>
            
         </div>
         </div>;
