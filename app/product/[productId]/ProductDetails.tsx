@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Button from "@/app/components/products/Button";
 import SetColor from "@/app/components/products/SetColor";
