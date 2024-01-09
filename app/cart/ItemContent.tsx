@@ -33,7 +33,7 @@ const ItemContent: React.FC<ItemContentProps> = ({
         ">
             <Link href={`/product/${item.id}`}>
                 <div className="relative w-[70px] aspect-square">
-                    <Image src={item.selectedImg.image} alt={item.name} fill className=" object-contain"></Image>
+                    <Image src={item.selectedImg.image} alt={item.brand} fill className=" object-contain"></Image>
                 </div>
             </Link>
             <div className="flex flex-col justify-between">
