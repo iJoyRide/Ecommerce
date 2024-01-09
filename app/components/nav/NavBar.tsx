@@ -24,12 +24,9 @@ const NavBar = () => {
                 gap-3
                 md:gap-0
                 ">
-                    <Link href="/" 
-                    className={`${redressed.className}
-                    font-bold text-2xl`}
-                    >
-                        E-Shop
-                        </Link>
+                    <Link href="/" className=" ml-3">
+                        SF Boutique
+                    </Link>
                     <div className="hidden md:block">Search</div>
                     <div className="flex items-center gap-8 md:gap-12 ">
                         <CartCount/>

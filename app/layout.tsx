@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast'
 const poppins = Poppins ({ subsets: ['latin'], weight:['400','700','900'] })
 
 export const metadata: Metadata = {
-  title: 'E-shop',
+  title: 'SF Boutique',
   description: 'Ecommerce app',
 }
 
