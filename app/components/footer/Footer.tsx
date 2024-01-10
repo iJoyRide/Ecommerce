@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "../Container";
+import Container from "../products/Container";
 import FooterList from "./FooterList";
 import {MdFacebook} from 'react-icons/md';
 import {AiFillInstagram, AiFillTwitterCircle, AiFillYoutube} from 'react-icons/ai';

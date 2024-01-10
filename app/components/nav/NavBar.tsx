@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Container from "../Container";
+import Container from "../products/Container";
 import { Redressed } from "next/font/google";
 import CartCount from "./CartCount";
 
