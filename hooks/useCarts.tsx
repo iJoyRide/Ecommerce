@@ -27,9 +27,6 @@ export const CartContextProvider = (props: Props) => {
     const [cartTotalAmount, setCartTotalAmount] =useState(0);
     const [cartProducts, setCartProducts] =useState<CartProductType[] | null>(null);
 
-    console.log('qty', cartTotalQty);
-    console.log('amount', cartTotalAmount);
-
     useEffect(() => {
         const cartItems: any = localStorage.getItem('eShopCartItems')
         const cProducts: CartProductType[] | null = JSON.parse(cartItems)
