@@ -20,6 +20,7 @@
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
     "autoprefixer": "10.4.16",
+    "axios": "^1.6.5",
     "bcrypt": "^5.1.1",
     "eslint": "8.55.0",
     "eslint-config-next": "14.0.3",
