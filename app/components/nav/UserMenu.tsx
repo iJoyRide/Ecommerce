@@ -5,6 +5,8 @@ import { useCallback, useState } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
 import Avatar from "../Avatar";
 import MenuItem from "./MenuItem";
+import { signOut } from "next-auth/react";
+import BackDrop from "./Backdrop";
 
 const UserMenu = () => {
     const [isOpen, setIsOpen] =useState(false)
@@ -49,13 +51,29 @@ const UserMenu = () => {
                     cursor-pointer
                     ">
                         <div>
-                            <Link href="orders">
+                            <Link href="/orders">
                                 <MenuItem onClick={toggleOpen}>Your Oders</MenuItem>
+                            </Link>
+                            <Link href="/admin">
+                                <MenuItem onClick={toggleOpen}>Admin Dashboard</MenuItem>
+                            </Link>
+                            <MenuItem onClick={() => {
+                                toggleOpen();
+                                signOut();
+                            }} >Logout</MenuItem>
+                        </div>                  
+                        <div>
+                            <Link href="/login">
+                                <MenuItem onClick={toggleOpen}>Login</MenuItem>
+                            </Link>
+                            <Link href="/register">
+                                <MenuItem onClick={toggleOpen}>Register</MenuItem>
                             </Link>
                         </div>
                     </div>
                 )}
             </div>
+            {isOpen ? <BackDrop onClick={toggleOpen}/> : null}
         </>
     );
 }
