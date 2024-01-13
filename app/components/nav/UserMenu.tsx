@@ -1,8 +1,10 @@
 "use client";
 
-import { Avatar } from "@mui/material";
+import Link from "next/link";
 import { useCallback, useState } from "react";
 import { AiFillCaretDown } from "react-icons/ai";
+import Avatar from "../Avatar";
+import MenuItem from "./MenuItem";
 
 const UserMenu = () => {
     const [isOpen, setIsOpen] =useState(false)
@@ -27,11 +29,32 @@ const UserMenu = () => {
                 cursor-pointer 
                 hover:shadow-md 
                 transition 
-                text-slate-700"
+                 text-slate-700"
                 >
                     <Avatar/>
                     <AiFillCaretDown/>
                 </div>
+                {isOpen &&(
+                    <div className="absolute 
+                    rounded-md 
+                    shadow-md 
+                    w-[170px] 
+                    bg-white 
+                    overflow-hidden 
+                    right-0
+                    top-12 
+                    text-sm 
+                    flex 
+                    flex-col 
+                    cursor-pointer
+                    ">
+                        <div>
+                            <Link href="orders">
+                                <MenuItem onClick={toggleOpen}>Your Oders</MenuItem>
+                            </Link>
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );
