@@ -3,6 +3,7 @@ import Container from "./components/products/Container";
 import HomeBanner from "./components/HomeBanner";
 import { truncateText } from "@/utils/truncateText";
 import ProductCard from "./components/products/ProductCard";
+export const revalidate = 0;
 
 export default function Home() {
   return (<div>
